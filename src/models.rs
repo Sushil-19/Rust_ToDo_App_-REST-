@@ -13,6 +13,12 @@ pub struct CreateTodo {
     pub title: String,
 }
 
+#[derive(Debug, Deserialize)]
+pub struct UpdateTodo { // New struct
+    pub title: String,
+    pub completed: bool,
+}
+
 impl Todo {
     pub fn new(title: String) -> Todo {
         Todo {
